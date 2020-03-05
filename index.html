@@ -3,18 +3,44 @@
             <meta charset="UTF-8">
             <link rel="stylesheet" href="konopex.css">
     </head>
+    <body onload='zegar()'>
     <div>
         <center>
             <img src="logo.png" alt="logo" >
-        </center>
 
+        </center>
+        
+        <center>
+            <form name="timer"><input type="text" name="asdf" size="7"></form>
+        <script>
+            function zegar(){
+            data=new Date();
+            godz= data.getHours();
+            min= data.getMinutes();
+            sek= data.getSeconds();
+            if(godz<10){
+                godz= "0" + godz;
+            }
+            else if(min<10){
+                min= "0" + min;
+            }
+            else if(sek<10){
+                sek= "0" + sek;
+            }
+            document.timer.asdf.value=godz+":"+min+":"+sek
+            setTimeout("zegar()",1000)
+        }
+        </script>
+            </font>
+        </center>
+        
     </div>
     <h1>
         <center>
             <a href="index.html">Główna</a>
             <a href="odmiany.html">Odmiany</a>
-            <a href="konopex.pl/bestseller">Bestsellery</a>
-            <a href="konopex.pl/regulamin">Regulamin</a>
+            <a href="tymczasowy.html">Bestsellery</a>
+            <a href="tymczasowy.html">Regulamin</a>
         </center>
     </h1>
     <h2>
@@ -39,4 +65,5 @@
         
         
     </h2>
+</body>
 </html>
