@@ -1,0 +1,42 @@
+body{
+    background-color: black;
+}
+a:link {
+    color: #00ff00;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Arial Black", "Arial Bold";
+}
+a:visited {
+    color: #00ff00;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Arial Black", "Arial Bold";
+}
+a:hover {
+    color: #008000;
+    text-decoration: none;
+    font-family: "Arial Black", "Arial Bold";
+}
+.copyleft {
+    display:inline-block;
+    transform: rotate(180deg);
+  }
+.cities {
+    
+    margin: 20px;
+    padding: 20px;
+}
+div {
+    text-decoration-color: white;
+}
+h2{
+    text-decoration-color: white;
+}
+img{
+    align-content: left;
+}
