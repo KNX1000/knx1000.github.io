@@ -1,0 +1,132 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+            <meta charset="UTF-8">
+            <link rel="stylesheet" href="knx1000.github.io_pliki/visual.css">
+    </head>
+    <body>
+        <center>
+    <div class="header" id="myHeader">
+    <div class="logo" id="glowna">
+            <a class="logolink" href="index.html">
+            <img style="height: 79px; width: 198px; margin-right: 15px;" src="knx1000.github.io_pliki/logo_big.jpg" alt="logo">
+            <h3>Firma "LECH" <br> Usługi - Produkcja - Handel</h3>
+            </a>
+    </div>
+    <!-- Linki do podstron -->
+    <div class="links" >
+        <a href="index.html">Główna</a>
+        <a href="#oferta">Oferta</a>
+        <a href="#dlaczegomy">Dlaczego LECH?</a>
+        <a href="#kontakt">Kontakt</a>
+        </center>
+    </div>
+    </div>
+    <h2>
+        <div class="powitanie">
+                <p>WITAMY NA NASZEJ STRONIE!</p>
+        </div>
+    </h2>
+<div class="content">
+<!-- Cała galeria -->
+<div class="slideshow-container">
+
+    <!-- Obrazki z galerii -->
+    <div class="mySlides fade">
+      
+      <img src="knx1000.github.io_pliki/image1.jpg" style="width:100%; border-radius: 2%;">
+      
+    </div>
+  
+    <div class="mySlides fade">
+      
+      <img src="knx1000.github.io_pliki/image2.jpg" style="width:100%; border-radius: 2%;">
+      
+    </div>
+  
+    <div class="mySlides fade">
+      
+      <img src="knx1000.github.io_pliki/image3.jpg" style="width:100%; border-radius: 2%;">
+      
+    </div>
+
+    <div class="mySlides fade">
+        <img src="knx1000.github.io_pliki/image4.jpg" style="width:100%; border-radius: 2%;">
+        
+      </div>
+  
+    
+  </div>
+  <br>
+  
+  
+  <!-- Skrypt Galeria -->
+  <script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none"; 
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1} 
+  x[slideIndex-1].style.display = "block"; 
+  setTimeout(carousel, 2000); 
+}
+  </script>
+  <!-- Skrypt Header-->
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+  </script>
+  <!-- Syf -->
+    
+    
+       
+    </div>
+    <div>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            
+    </div>
+    <!-- Footer z danymi-->
+    <div class="footer" id="kontakt">
+      <div class="contact">
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   KONTAKT:</h3>
+        <ol class="a">  
+          <li> </li>
+          <li>FIRMA "LECH" </li>
+          <li>Usługi - Produkcja - Handel </li>
+          <li>Przemysław Lech </li>
+          <li>43-180 Orzesze, ul Łączna 2 </li>
+          <li>tel. 32/2215739 fax 32/2211583 </li>
+          <li>lech.bramy@gmail.com </li>
+          <li>NIP 635 126 80 56 </li>
+        </ol>
+      </div>  
+    </div>
+    </body>
+</html>
