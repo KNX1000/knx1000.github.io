@@ -1,6 +1,6 @@
 body{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Bold;
-    background-color: whitesmoke;
+  font-family: 'Lato', sans-serif;
+  background-color: whitesmoke;
   }
 html {
   scroll-behavior: smooth;
@@ -11,7 +11,6 @@ a:link {
     text-align: center;
     text-decoration: none;
     display: flexbox;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 a:visited {
     color: #494949;
@@ -19,30 +18,24 @@ a:visited {
     text-align: center;
     text-decoration: none;
     display: flexbox;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 a:hover {
     color: #000000;
     text-decoration: none;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 h2{
   text-decoration-color: white;
 }
 img{
-  align-content: left;
+  
 }
 script{
   color: aliceblue;
 }
-.cities {
-    margin: 20px;
-    padding: 20px;
-}
 .logo
     {
         display: flex;
-        width: 1170px;
+        width: auto;
         margin: initial ;
         text-align: center;
         justify-content: center;
@@ -50,7 +43,6 @@ script{
         
     }
 .links{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Bold;
     font-size: 30px;
 }
 .img1 {
@@ -58,23 +50,24 @@ script{
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    border-radius: 1%;
+    border-radius: 0px;
   }
 .powitanie {
     text-align: center;
 }
 .footer {
-    position:static;
-    text-align:right;
-    
+    position:relative;
+    align-content: right;
     width: 100%;
     background-color: #e0dddd;
     color: #494949;
+    text-align: left;
+    float: right;
     
     
  }
  
- * {box-sizing:border-box}
+ * {box-sizing:content-box}
 
 /* Slideshow container */
 .slideshow-container {
@@ -88,54 +81,6 @@ script{
 .mySlides {
   display: none;
 }
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
@@ -143,7 +88,7 @@ script{
   width: 15px;
   margin: 0 2px;
   background-color: #bbb;
-  border-radius: 50%;
+  border-radius: 00%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
@@ -171,17 +116,24 @@ script{
 }
 .header {
   position:sticky;
-  background-color: #e0dddd;
+  background-color: whitesmoke;
+  text-align: center;
+  width: auto;
 }
 .a {
   list-style-type: none;
+  line-height: 28px;
+  
 }
 .contact{
-  text-align: justify;
+  text-align: left;
+    float: right;
+  padding:10px 50px 10px 10px;
+    
 }
 /* Page content */
 .content {
-  padding: 16px;
+  padding-top: 10px;
 }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */
@@ -197,4 +149,48 @@ script{
 }
 .logolink {
   display: flex;
+}
+.lewo{
+  float: right;
+  display: flex;
+  margin-top: 50px;
+}
+.prawo {
+  float:right;
+  margin-left:900px;
+  display: flex;
+}
+.ofertatxt-ramka {
+  padding-right: 10px;
+  border: 1px solid lightgray;
+  
+}
+.ofertatxt{
+  text-align: start;
+  padding-left: 10px;
+  padding-top: 15px;
+}
+.prw {
+  float: right;
+width: 440px;
+margin-top: 15px;
+padding-left: 15px;
+border-left: 1px solid #ddd;
+
+}
+.oferta {
+  padding-top: 200px;
+  text-align: center;
+}
+.dlaczego_my{
+    margin-top: 30px;
+    text-align: center;
+}
+.mapa {
+  float: left;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.tytul{
+    margin-left: 40px;
 }
