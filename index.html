@@ -1,70 +1,175 @@
 <html>
-    <head>
+  <head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
             <meta charset="UTF-8">
-            <link rel="stylesheet" href="konopex.css">
-    </head>
-    <body onload='zegar()'>
-    <div>
-        <center>
-            <img src="logo.png" alt="logo" >
-
-        </center>
-        
-        <center>
-            <form name="timer"><input type="text" name="asdf" size="7"></form>
-        <script>
-            function zegar(){
-            data=new Date();
-            godz= data.getHours();
-            min= data.getMinutes();
-            sek= data.getSeconds();
-            if(godz<10){
-                godz= "0" + godz;
-            }
-            else if(min<10){
-                min= "0" + min;
-            }
-            else if(sek<10){
-                sek= "0" + sek;
-            }
-            document.timer.asdf.value=godz+":"+min+":"+sek
-            setTimeout("zegar()",1000)
-        }
-        </script>
-            </font>
-        </center>
-        
+            <link rel="stylesheet" href="pliki/visual.css">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+            
+            
+  </head>
+    <body>
+    <!-- Logo i nazwa-->
+       <div id="back"></div>
+    <div class="header" id="myHeader">
+    <div class="logo" id="glowna">
+            <a class="logolink" href="#back">
+            <img style="height: 79px; width: 198px; margin-right: 15px;" src="pliki/logo_big.jpg" alt="logo">
+            <h3>Firma "LECH" <br> Usługi - Produkcja - Handel</h3>
+            </a>
     </div>
-    <h1>
-        <center>
-            <a href="index.html">Główna</a>
-            <a href="odmiany.html">Odmiany</a>
-            <a href="tymczasowy.html">Bestsellery</a>
-            <a href="tymczasowy.html">Regulamin</a>
-            <a href="lech.html">Regulamin</a>
-        </center>
-    </h1>
+    <!-- Linki do podstron -->
+     <div class="links" >
+        <a href="#back">Główna</a>
+        <a href="#oferta">Oferta</a>
+        <a href="#dlaczego">Dlaczego LECH?</a>
+        <a href="#kontakt">Kontakt</a>
+     </div>
+    </div>
     <h2>
-        <center>
-                <p><font color="#00ff00">WITAMY NA NASZEJ STRONIE!</font></p>
-            <img src="elon420.gif" Id="elon420">
-            <br>
-            <p><font color="#00ff00">Zajrzyj do naszej oferty!</font></p>
-            <br>
-            <br>
-            <br>
-            <br>
-            <p><font color="#00ff00">420 4 ever!</font></p>
-        </center>
-        <div>
-            <center>
-                <font color="white">
-                KOPYRAJT OŁRAJT <span class="copyleft">&copy;</span>
-                </font>
-            </center>
-        </div>     
-        
-        
+        <div class="powitanie">
+                <p>WITAMY NA NASZEJ STRONIE!</p>
+        </div>
     </h2>
-</body>
+
+<!-- Cała galeria -->
+<div>
+<div class="slideshow-container">
+
+    <!-- Obrazki z galerii -->
+    <div class="mySlides fade">
+      
+      <img src="pliki/image1.jpg" style="width: 950px; height: 400px; display: block; margin-left: auto; margin-right: auto">
+      
+    </div>
+  
+    <div class="mySlides fade">
+      
+      <img src="pliki/image2.jpg" style="width: 950px; height: 400px; display: block; margin-left: auto; margin-right: auto">
+      
+    </div>
+  
+    <div class="mySlides fade">
+      
+      <img src="pliki/image3.jpg" style="width: 950px; height: 400px; display: block; margin-left: auto; margin-right: auto">
+      
+    </div>
+
+    <div class="mySlides fade">
+        <img src="pliki/image4.jpg" style="width: 950px; height: 400px; display: block; margin-left: auto; margin-right: auto">
+        
+      </div>
+  
+    
+  </div>
+  <br>
+</div>  
+  
+  <!-- Skrypt Galeria -->
+  <script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none"; 
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1} 
+  x[slideIndex-1].style.display = "block"; 
+  setTimeout(carousel, 2000); 
+}
+  </script>
+  <!-- Skrypt Header-->
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+  </script>
+   <!--Tu ma być oferta-->  
+<div class="content"id="oferta">
+  <h1 class="oferta" >Nasza Oferta</h1>
+   <div class="lewo">
+    <img style="width: 512; height: 342;" src="pliki/image5.jpg" alt="image5">
+    <div class="ofertatxt ofertatxt-ramka">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium dui lacinia velit suscipit, ac placerat sem accumsan. Aenean interdum justo justo. Aliquam in eleifend neque. Phasellus eu sapien mattis, congue erat ac, viverra felis. Morbi ipsum sem, dignissim eget sem ut, rhoncus suscipit nibh. Proin laoreet varius massa condimentum luctus. Pellentesque at mattis eros. Integer mollis lobortis vehicula. Donec vel lectus eget lorem elementum commodo.</div>
+  </div>
+  <div class="prawo">
+    <div class="ofertatxt ofertatxt-ramka prw" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium dui lacinia velit suscipit, ac placerat sem accumsan. Aenean interdum justo justo. Aliquam in eleifend neque. Phasellus eu sapien mattis, congue erat ac, viverra felis. Morbi ipsum sem, dignissim eget sem ut, rhoncus suscipit nibh. Proin laoreet varius massa condimentum luctus. Pellentesque at mattis eros. Integer mollis lobortis vehicula. Donec vel lectus eget lorem elementum commodo.</div>
+    <img style="width: 512; height: 342; margin-top: 30px;" src="pliki/image6.jpg" alt="image6">
+  </div>
+  <div class="lewo">
+    <img style="width: 512; height: 342;" src="pliki/image7.jpg" alt="image7">
+    <div class="ofertatxt ofertatxt-ramka ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium dui lacinia velit suscipit, ac placerat sem accumsan. Aenean interdum justo justo. Aliquam in eleifend neque. Phasellus eu sapien mattis, congue erat ac, viverra felis. Morbi ipsum sem, dignissim eget sem ut, rhoncus suscipit nibh. Proin laoreet varius massa condimentum luctus. Pellentesque at mattis eros. Integer mollis lobortis vehicula. Donec vel lectus eget lorem elementum commodo.</div>
+  </div>
+</div>
+<!-- Tutaj ma być dlaczaego my -->
+
+  
+  
+   <div class="dlaczego_my" >
+    <div>
+      <h2 class="dlmy"> Dlaczego warto wybrać firmę LECH?</h2>
+    </div>
+    <div class="onas" id="dlaczego">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at lectus vehicula, scelerisque eros et, ullamcorper lorem. Suspendisse potenti. Sed est neque, lacinia eu nunc a, efficitur facilisis diam. Fusce in fringilla neque. Nulla odio tortor, consequat at rutrum pellentesque, imperdiet et lacus. Nam ut erat eu odio gravida posuere sed in ligula. Sed ac nisi vitae magna tempus vehicula in at sapien. Cras suscipit justo nec tortor porttitor suscipit. Aliquam eleifend convallis enim, ultrices aliquet erat. Aliquam luctus sem velit, in dignissim lacus mattis fringilla. Morbi a vulputate neque. Vivamus semper aliquet leo. Ut a aliquet orci. Etiam varius quis lorem ut egestas. Aliquam magna nulla, mattis in luctus quis, rhoncus et erat.
+
+      Nullam a nulla ante. Aliquam in consectetur dui, a pretium lorem. Phasellus ac risus nibh. Duis commodo eros quis enim rhoncus suscipit. Cras pretium, tortor a pulvinar dictum, risus lacus cursus elit, at sagittis justo mauris sed urna. Mauris eu sapien egestas, porttitor eros a, lacinia purus. Nulla facilisi.
+      
+      Duis molestie porttitor neque eu pharetra. Phasellus eget scelerisque erat, sed vestibulum ante. Fusce pulvinar auctor tellus eget facilisis. Donec vel tincidunt est, sit amet egestas eros. Ut hendrerit mi in lorem interdum blandit. Nunc arcu metus, ullamcorper in tellus nec, porta malesuada nulla. In tempus tristique lacus, id fermentum dolor commodo in. Vestibulum consequat, felis quis efficitur tempor, eros turpis mattis est, in fermentum turpis lectus vel dolor. Nulla nisi nulla, auctor eu lectus sed, congue dictum elit. Praesent nec placerat ipsum, eu dignissim tellus. Phasellus ornare neque vel tellus placerat consequat. Nunc ac efficitur quam. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at lectus vehicula, scelerisque eros et, ullamcorper lorem. Suspendisse potenti. Sed est neque, lacinia eu nunc a, efficitur facilisis diam. Fusce in fringilla neque. Nulla odio tortor, consequat at rutrum pellentesque, imperdiet et lacus. Nam ut erat eu odio gravida posuere sed in ligula. Sed ac nisi vitae magna tempus vehicula in at sapien. Cras suscipit justo nec tortor porttitor suscipit. Aliquam eleifend convallis enim, ultrices aliquet erat. Aliquam luctus sem velit, in dignissim lacus mattis fringilla. Morbi a vulputate neque. Vivamus semper aliquet leo. Ut a aliquet orci. Etiam varius quis lorem ut egestas. Aliquam magna nulla, mattis in luctus quis, rhoncus et erat.
+
+      Nullam a nulla ante. Aliquam in consectetur dui, a pretium lorem. Phasellus ac risus nibh. Duis commodo eros quis enim rhoncus suscipit. Cras pretium, tortor a pulvinar dictum, risus lacus cursus elit, at sagittis justo mauris sed urna. Mauris eu sapien egestas, porttitor eros a, lacinia purus. Nulla facilisi.
+      
+      Duis molestie porttitor neque eu pharetra. Phasellus eget scelerisque erat, sed vestibulum ante. Fusce pulvinar auctor tellus eget facilisis. Donec vel tincidunt est, sit amet egestas eros. Ut hendrerit mi in lorem interdum blandit. Nunc arcu metus, ullamcorper in tellus nec, porta malesuada nulla. In tempus tristique lacus, id fermentum dolor commodo in. Vestibulum consequat, felis quis efficitur tempor, eros turpis mattis est, in fermentum turpis lectus vel dolor. Nulla nisi nulla, auctor eu lectus sed, congue dictum elit. Praesent nec placerat ipsum, eu dignissim tellus. Phasellus ornare neque vel tellus placerat consequat. Nunc ac efficitur quam. 
+    </div>
+  </div> 
+  
+
+  
+</div>
+  
+ 
+
+</div>
+   
+    
+    <!-- Footer z danymi-->
+    <div class="footer" id="kontakt">
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.0427083233526!2d18.79512691571961!3d50.12292277943156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x26276cb456c53fb0!2sFirma%20LECH%20UPH%20Przemys%C5%82aw%20Lech%20bramy%2C%20rolety%2C%20ogrodzenia.!5e0!3m2!1spl!2spl!4v1620626949116!5m2!1spl!2spl" width="600" height="225" style="border:0;" allowfullscreen="" loading="lazy" >
+        </iframe>
+    </div>
+
+      <div class="contact">
+        
+        <h3 class="tytul">KONTAKT</h3>
+        <!--Dane firmy itd-->
+        <ol class="a">  
+          <li> </li>
+          <li>FIRMA "LECH" </li>
+          <li>Usługi - Produkcja - Handel </li>
+          <li>Przemysław Lech </li>
+          <li>43-180 Orzesze, ul Łączna 2 </li>
+          <li>tel. 32/2215739 fax 32/2211583 </li>
+          <li>lech.bramy@gmail.com </li>
+          <li>NIP 635 126 80 56 </li>
+        </ol>
+      </div>  
+     <div class="TOS">
+        <a href="pliki/TOS.html">Terms of service</a>
+
+     </div>
+    </div>
+    </body>
 </html>
