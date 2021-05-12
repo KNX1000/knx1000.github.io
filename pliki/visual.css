@@ -51,7 +51,7 @@ script{
     border-radius: 0px;
 }
 .powitanie {
-    text-align: center;
+    padding-top: 30px;
 }
  * {box-sizing:content-box}
 
@@ -128,21 +128,22 @@ script{
 .ofertatxt{
   text-align: start;
   padding-left: 30px;
-  padding-top: 15px;
+  padding-top: 40px;
 }
 .prw {
   float: right;
   width: auto;
-  margin-top: 30px;
   padding-left: 15px;
   border: 1px solid lightgray;
   text-align: right ;
-  padding-top: 100px;
+  padding-top: 90px;
+  padding-right: 30px;
 }
 .ofertatxt-ramka {
   padding-right: 10px;
   border: 1px solid lightgray;
   width: auto;
+  
 }
 .content {
   display: block;
@@ -152,11 +153,11 @@ script{
 .lewo{
   float: right;
   display: flex;
-  margin-top: 50px;
+  
 }
 .prawo {
   float:right;
-  
+  margin-bottom: 30px;
   display: inline-flex;
 }
 
@@ -168,6 +169,7 @@ script{
 .onas{
   text-align: center;
   margin-top: 30px;
+  
 }
 .dlmy{
   margin-top: 30px;
@@ -200,3 +202,6 @@ script{
   padding-top: 265px;
   padding-left: 20px;
 }
+
+
+
