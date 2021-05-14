@@ -1,36 +1,43 @@
+/* BODY */
 body{
   font-family: 'Lato', sans-serif;
-  background-color: whitesmoke;
-  }
+  background-color: #f4f2f0;
+  justify-content: center;
+  width: 1185px;
+  margin-left: auto;
+  margin-right: auto;
+}
 html {
   scroll-behavior: smooth;
 }
+h2{
+  text-decoration-color: #f4f2f0;
+}
+/* HEADER */
 a:link {
-    color: #494949;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: flexbox;
+  color: #494949;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: flexbox;
 }
 a:visited {
-    color: #494949;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: flexbox;
+  color: #494949;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: flexbox;
 }
 a:hover {
-    color: #000000;
-    text-decoration: none;
+  color: #000000;
+  text-decoration: none;
+  background-color: #49494965;
 }
-h2{
-  text-decoration-color: white;
-}
-img{
-  
-}
-script{
-  color: aliceblue;
+.TOS a:hover {
+  color: #000000;
+  text-decoration: none;
+  background-color: #C0BFC4;
+  padding: 10px 25px;
 }
 .logo{
   display: flex;
@@ -42,18 +49,15 @@ script{
 }
 .links{
     font-size: 30px;
+    padding-bottom: 20px;
 }
-.img1 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    border-radius: 0px;
-}
+
+
+
 .powitanie {
     padding-top: 30px;
 }
- * {box-sizing:content-box}
+ * {box-sizing:1185}
 
 /* GALERIA */
 .slideshow-container {
@@ -61,13 +65,16 @@ script{
   position:static;
   height: 200px;
   margin: auto;
+  background-color: #f4f2f0;
+  padding-bottom: 230px;
+  padding-top: 30px;
 }
 
 /* Hide the images by default */
 .mySlides {
   display: none;
 }
-
+a
 
 .active, .dot:hover {
   background-color: #717171;
@@ -92,13 +99,14 @@ script{
 }
 .header {
   position:sticky;
-  background-color: whitesmoke;
+  background-color: #f0eeec;
   text-align: center;
   width: auto;
+  padding: 0px;
 }
 .a {
   list-style-type: none;
-  line-height: 28px;
+  line-height: 30px;
   
 }
 
@@ -108,6 +116,7 @@ script{
   top: 0;
   width: 100%;
   padding-bottom: 10px;
+  padding: 0px;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
@@ -122,13 +131,17 @@ script{
 
 /* OFERTA */
 .oferta {
-  padding-top: 200px;
+  margin-top: 170px;
+  padding-top: 30px;
   text-align: center;
+  padding-bottom: 30px;
 }
 .ofertatxt{
   text-align: start;
   padding-left: 30px;
   padding-top: 40px;
+  background-color: #ffffff;
+
 }
 .prw {
   float: right;
@@ -138,51 +151,75 @@ script{
   text-align: right ;
   padding-top: 90px;
   padding-right: 30px;
+  background-color: #f4f2f0;
+
 }
 .ofertatxt-ramka {
   padding-right: 10px;
   border: 1px solid lightgray;
   width: auto;
-  
+  background-color: #ffffff;
+
 }
 .content {
   display: block;
-   margin-left: auto;
-    margin-right: auto"
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f4f2f0;
 }
 .lewo{
   float: right;
   display: flex;
+  background-color: #f4f2f0;
   
 }
 .prawo {
   float:right;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   display: inline-flex;
 }
-
+.nopadd{
+  padding-top: 0px;
+}
 /* DLACZEGO MY */
 .dlaczego_my{
-    margin-top: 300px;
-    text-align: center;
+    margin-top: 0px;
+    background-color: #f4f2f0;
+
 }
-.onas{
-  text-align: center;
+h2.onas{
+  background-color: #f4f2f0;
   margin-top: 30px;
-  
-}
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 140;
+  padding: 30px 30px 30px 30px;
+  text-align: left;
+} 
 .dlmy{
-  margin-top: 30px;
+  padding-top: 30px;
+  text-align: center;
+  background-color: #f4f2f0;
+}
+.dlaczego{
+  padding-top: 0px;
+}
+.onastytul{
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #f4f2f0;
 }
 /* FOOTER */
 .footer {
   position:relative;
   align-content: right;
   width: 100%;
-  background-color: #e0dddd;
+  background-color: #C0BFC4;
   color: #494949;
   text-align: left;
   float: right;
+  
 }
 .mapa {
   float: left;
@@ -192,7 +229,10 @@ script{
 .contact{
   text-align: left;
   float: inherit;
-  padding:0px 50px 10px 0px;
+  padding:30px 50px 75px 10px;
+  background-color: #E50914;
+  color: #f4f2f0;
+  margin-top: -50px;
 }
 .tytul{
   margin-left: 40px;
@@ -201,7 +241,26 @@ script{
   text-align: left;
   padding-top: 265px;
   padding-left: 20px;
+  padding-bottom: 15px;
+  text-decoration: none;
+  background-color: none;
 }
-
-
+li.numer{
+  font-weight: bold;
+}
+.autorzy{
+  font-size: 10px;
+  padding-bottom: 15px;
+  padding-left:20px;
+}
+.image{
+  float: left;
+}
+.text.onas{
+  float: right;
+}
+.responsive {
+  width: 100%;
+  height: auto;
+}
 
