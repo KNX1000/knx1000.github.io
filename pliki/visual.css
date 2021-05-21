@@ -14,49 +14,19 @@ h2{
   text-decoration-color: #f4f2f0;
 }
 /* HEADER */
-a:link {
-  color: #494949;
-  padding: 10px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: flexbox;
-}
-a:visited {
-  color: #494949;
-  padding: 10px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: flexbox;
-}
-a:hover {
-  color: #000000;
-  text-decoration: none;
-  background-color: #49494965;
-}
-.TOS a:hover {
-  color: #000000;
-  text-decoration: none;
-  background-color: #C0BFC4;
-  padding: 10px 25px;
-}
 .logo{
   display: flex;
   width: auto;
   margin: initial ;
   text-align: center;
   justify-content: center;
-  align-items: center;   
-}
+  align-items: center;}   
+
 .links{
     font-size: 30px;
     padding-bottom: 20px;
-}
+    padding-top: 20px;}
 
-
-
-.powitanie {
-    padding-top: 30px;
-}
  * {box-sizing:1185}
 
 /* GALERIA */
@@ -70,11 +40,21 @@ a:hover {
   padding-top: 30px;
 }
 
-/* Hide the images by default */
+/* Chowanie zdjęć */
 .mySlides {
   display: none;
 }
-a
+Kropki określające które  to zdjęcie
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
 
 .active, .dot:hover {
   background-color: #717171;
@@ -82,10 +62,10 @@ a
 
 /* Fading animation */
 .fade {
-  -webkit-animation-name: none;
-  -webkit-animation-duration: 0s;
-  animation-name: none;
-  animation-duration: 0s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
 @-webkit-keyframes fade {
@@ -97,26 +77,26 @@ a
   from {opacity: .4}
   to {opacity: 1}
 }
+
+
+
 .header {
   position:sticky;
   background-color: #f0eeec;
   text-align: center;
   width: auto;
   padding: 0px;
+  border: 1px solid lightgray;
+  z-index: 99;
+  padding-top: 10px;
 }
-.a {
-  list-style-type: none;
-  line-height: 30px;
-  
-}
-
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
   position:sticky;
   top: 0;
-  width: 100%;
-  padding-bottom: 10px;
+  width: auto;
   padding: 0px;
+  z-index: 99;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
@@ -127,23 +107,20 @@ a
   display: flex;
 }
 
-
-
 /* OFERTA */
 .oferta {
-  margin-top: 170px;
+  margin-top: 140px;
   padding-top: 30px;
   text-align: center;
   padding-bottom: 30px;
 }
-.ofertatxt{
+.oferta-tekst{
   text-align: start;
-  padding-left: 30px;
+  padding-left: 10px;
   padding-top: 40px;
   background-color: #ffffff;
-
 }
-.prw {
+.oferta-prawa {
   float: right;
   width: auto;
   padding-left: 15px;
@@ -152,9 +129,8 @@ a
   padding-top: 90px;
   padding-right: 30px;
   background-color: #f4f2f0;
-
 }
-.ofertatxt-ramka {
+.oferta-tekst-ramka {
   padding-right: 10px;
   border: 1px solid lightgray;
   width: auto;
@@ -167,13 +143,13 @@ a
   margin-right: auto;
   background-color: #f4f2f0;
 }
-.lewo{
+.oferta-lewa{
   float: right;
   display: flex;
-  background-color: #f4f2f0;
+  
   
 }
-.prawo {
+.oferta-prawo {
   float:right;
   margin-bottom: 0px;
   display: inline-flex;
@@ -206,7 +182,7 @@ h2.onas{
 }
 .onastytul{
   text-align: center;
-  padding-top: 30px;
+  padding-top: 110px;
   padding-bottom: 30px;
   background-color: #f4f2f0;
 }
@@ -218,14 +194,13 @@ h2.onas{
   background-color: #C0BFC4;
   color: #494949;
   text-align: left;
-  float: right;
+  float: right;}
   
-}
 .mapa {
   float: left;
   margin-top: 30px;
-  margin-left: 40px;
-}
+  margin-left: 40px;}
+
 .contact{
   text-align: left;
   float: inherit;
@@ -245,22 +220,182 @@ h2.onas{
   text-decoration: none;
   background-color: none;
 }
-li.numer{
-  font-weight: bold;
+.TOS a:hover {
+  color: #000000;
+  text-decoration: none;
+  background-color: #C0BFC4;
+  padding: 10px 25px;
 }
+li.numer{
+  font-weight: bold;}
+
 .autorzy{
   font-size: 10px;
   padding-bottom: 15px;
   padding-left:20px;
-}
+  text-decoration: none;
+  background-color: none;}
+
 .image{
   float: left;
 }
-.text.onas{
-  float: right;
-}
-.responsive {
-  width: 100%;
-  height: auto;
+.text-onas{
+  margin-bottom: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: justify;
 }
 
+.align-left {
+	float: left;
+	margin-right: 20px;
+}
+
+
+a.button:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  transform-style: flat;
+  transform: translate3d(-50%, -50%, 0);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+a.button:focus, .button:hover {
+  background: #696969;
+}
+a.button:active:after {
+  width: 200px;
+  height: 200px;
+}
+.button {
+  padding: 16px 42px;
+  box-shadow: 0px 12px 7px -2px rgba(0, 0, 0, 0.5);
+  line-height: 1.25;
+  background: #a1a1a1;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  position: relative;
+  transition: background-color 0.6s ease;
+  overflow: hidden;
+}
+a.logolink{
+  text-decoration: none;
+  color: #494949;
+}
+a.TOS{
+  background: none;
+  text-decoration: none;
+  color: #494949;
+}
+ol.a{
+  list-style: none;
+  line-height: 30px;
+  margin-right: 50px;
+}
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes slideInLeft {
+  0% {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  }
+  @keyframes slideInLeft {
+  0% {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  }
+   /* ----------------------------------------------
+ * Generated by Animista on 2021-5-21 12:46:31
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+ 
+  .slide-in-fwd-top {
+    -webkit-animation: slide-in-fwd-top 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s both;
+            animation: slide-in-fwd-top 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s both;
+  }
+ 
+
+ /* animation slide-in-fwd-top */
+ 
+ 
+@-webkit-keyframes slide-in-fwd-top {
+  0% {
+    -webkit-transform: translateZ(-1400px) translateY(-800px);
+            transform: translateZ(-1400px) translateY(-800px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-fwd-top {
+  0% {
+    -webkit-transform: translateZ(-1400px) translateY(-800px);
+            transform: translateZ(-1400px) translateY(-800px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+.slide-in-right {
+	-webkit-animation: slide-in-right 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-right 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
