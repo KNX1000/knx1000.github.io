@@ -34,103 +34,44 @@
     </div>
 
     <!-- Cała galeria -->
+<div class="window">
+  <div class="window__slider">
 
-<div style="overflow: hidden;" class="slideshow-container">
+     <!-- Same Zdjęcia -->
 
-     <!-- Karuzela zdjęć -->
-
-            <div class="mySlides slide-in-right">
+            <div class="window__slider__img-container window__slider__img-container--opacity">
               <img src="pliki/image1.jpg" style="width:100%">
             </div>
 
-            <div class="mySlides slide-in-right">
+            <div class="window__slider__img-container">
               <img src="pliki/image2.jpg" style="width:100%">
             </div>
 
-            <div class="mySlides slide-in-right">
+            <div class="window__slider__img-container">
               <img src="pliki/image3.jpg" style="width:100%">
             </div>
 
-            <div class="mySlides slide-in-right">
-             <img src="pliki/image3.jpg" style="width:100%">
+            <div class="window__slider__img-container">
+             <img src="pliki/image4.jpg" style="width:100%">
             </div>
+            <button class="window__slide-left">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="window__slide-right">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+  </div>
 </div>
-<br>
+
+</div>
 <div  id="oferta"></div>
 
       <!-- Skrypt Galeria-->
-      <script>
-        var slideIndex = 0;
-        carousel();
-
-        function carousel() {
-          var i;
-          var x = document.getElementsByClassName("mySlides");
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-          }
-          slideIndex++;
-          if (slideIndex > x.length) {
-            slideIndex = 1
-          }
-          x[slideIndex - 1].style.display = "block";
-          setTimeout(carousel, 10000);
-        }
-
-      </script> 
+      <script src="galeria.js"></script> 
       <!-- Skrypt Header-->
-      <script>
-        window.onscroll = function() {
-          myFunction()
-        };
-
-        var header = document.getElementById("myHeader");
-        var sticky = header.offsetTop;
-
-        function myFunction() {
-          if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-          } else {
-            header.classList.remove("sticky");
-          }
-        }
-
-      </script>
-      <!-- Skrypt foto-->
-      <script>
-        const scrollOffset = 100;
- 
- const scrollElement = document.querySelector(".js-scroll");
-  
- const elementInView = (el, offset = 0) => {
-   const elementTop = el.getBoundingClientRect().top;
-  
-   return (
-     elementTop <= 
-     ((window.innerHeight || document.documentElement.clientHeight) - offset)
-   );
- };
-  
- const displayScrollElement = () => {
-   scrollElement.classList.add('scrolled');
- }
-  
- const hideScrollElement = () => {
-   scrollElement.classList.remove('scrolled');
- }
-  
- const handleScrollAnimation = () => {
-   if (elementInView(scrollElement, scrollOffset)) {
-       displayScrollElement();
-   } else {
-     hideScrollElement();
-   }
- }
-  
- window.addEventListener('scroll', () => {
-   handleScrollAnimation();
- })
-      </script>
+      <script src="header.js"></script> 
+      
+     
       <!--Tu ma być oferta-->
       <div class="content">
         <h1 class="oferta">Nasza Oferta</h1>
