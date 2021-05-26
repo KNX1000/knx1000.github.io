@@ -84,7 +84,7 @@ Kropki określające które  to zdjęcie
   position:sticky;
   background-color: #f0eeec;
   text-align: center;
-  width: auto;
+  width: 100%;
   padding: 0px;
   border: 1px solid lightgray;
   z-index: 99;
@@ -94,11 +94,11 @@ Kropki określające które  to zdjęcie
 .sticky {
   position:sticky;
   top: 0;
-  width: auto;
+  width: 100%;
   padding: 0px;
   z-index: 99;
+  box-shadow: 0px 0px 10px 0px grey;
 }
-
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
   padding-top: 102px;
@@ -106,7 +106,9 @@ Kropki określające które  to zdjęcie
 .logolink {
   display: flex;
 }
-
+.sticky + .logo {
+  display: inline;
+}
 /* OFERTA */
 .oferta {
   margin-top: 140px;
