@@ -1,28 +1,10 @@
 "use strict";
 var slider = document.querySelector('.window__slider');
 var images = document.querySelectorAll('.window__slider__img-container');
-var buttonsCurrentImage = document.querySelectorAll('.window__current-img__btn');
+
 var btnSlideLeft = document.querySelector('.window__slide-left');
 var btnSlideRight = document.querySelector('.window__slide-right');
 
-/**
- * -------------------------------------------------------------
- * -------------------------------------------------------------
- * -------------------------------------------------------------
- * !!! IMPORTANT !!!
- * in closure ImageSlider calling order of functions is very important
- * for this code to work properly
- * 
- * main logic is behind calculating current and previous position
- * first figure out how it's working, then try to make modification
- * -------------------------------------------------------------
- * -------------------------------------------------------------
- * -------------------------------------------------------------
- */
-
-// closures main purpose encapsulation of interval
-// without them clearing interval is messed due to js
-// problematic scope of function accessing global var
 var imageSlider = (function() {
   var image = {
     first: 0,
@@ -68,10 +50,8 @@ var imageSlider = (function() {
 
     // marks currently active image on respective button
     // removes from previous
-    buttonsCurrentImage[currentImage].classList
-      .add('window__current-img__btn--current');
-    buttonsCurrentImage[previousImage].classList
-      .remove('window__current-img__btn--current');
+    
+    
   }
 
   return {
@@ -85,8 +65,7 @@ var imageSlider = (function() {
       var beforeGoingToImage = currentImage;
       images[beforeGoingToImage].classList
         .remove('window__slider__img-container--opacity');
-      buttonsCurrentImage[beforeGoingToImage].classList
-        .remove('window__current-img__btn--current');
+      
 
       // get new image
       currentImage = imageNumber;
@@ -98,8 +77,7 @@ var imageSlider = (function() {
       // add effect to current visible image and respective btn
       images[currentImage].classList
       .add('window__slider__img-container--opacity');
-      buttonsCurrentImage[currentImage].classList
-      .add('window__current-img__btn--current');
+      
       
       // start animation
       interval = setInterval(slideRight, 5000);
@@ -130,8 +108,7 @@ var imageSlider = (function() {
       // add effect to image and respective btn
       images[currentImage].classList
         .add('window__slider__img-container--opacity');
-      buttonsCurrentImage[currentImage].classList
-        .add('window__current-img__btn--current');
+      
 
       // start animation
       interval = setInterval(slideRight, 5000);
@@ -144,8 +121,7 @@ var imageSlider = (function() {
       var currentBeforeSlidingRight = currentImage;
       images[currentBeforeSlidingRight].classList
         .remove('window__slider__img-container--opacity');
-      buttonsCurrentImage[currentBeforeSlidingRight].classList
-        .remove('window__current-img__btn--current');
+     
 
       // calculate new position
       previousImage = currentImage;
@@ -161,8 +137,7 @@ var imageSlider = (function() {
       // add to new image and button
       images[currentImage].classList
         .add('window__slider__img-container--opacity');
-      buttonsCurrentImage[currentImage].classList
-        .add('window__current-img__btn--current');
+      
 
       // start animation
       interval = setInterval(slideRight, 5000);
@@ -177,32 +152,6 @@ var imageSlider = (function() {
 function startSlider() {
   // start after loading page
   imageSlider.startSlideRightInterval();
-
-  // left and right move by clicking
-  btnSlideLeft.addEventListener('click', imageSlider.handleBtnSlideLeft);
-  btnSlideRight.addEventListener('click', imageSlider.handleBtnSlideRight);
-
-  // 5 button listeners for each image
-  buttonsCurrentImage[0].addEventListener(
-    'click', function() {
-      imageSlider.goToImage(0)
-    }
-  );
-  buttonsCurrentImage[1].addEventListener(
-    'click', function() {
-      imageSlider.goToImage(1)
-    }
-  );
-  buttonsCurrentImage[2].addEventListener(
-    'click', function() {
-      imageSlider.goToImage(2)
-    }
-  );
-  buttonsCurrentImage[3].addEventListener(
-    'click', function() {
-      imageSlider.goToImage(3)
-    }
-  );
 }
 
 window.addEventListener('load', startSlider);
